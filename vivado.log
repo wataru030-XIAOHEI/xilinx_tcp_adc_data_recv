@@ -1,0 +1,926 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Feb 12 19:42:08 2022
+# Process ID: 20420
+# Current directory: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent22576 C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.xpr
+# Log file: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/vivado.log
+# Journal file: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/wataru/Desktop/新建文件夹/Miz_sys/Miz_sys' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/wataru/Desktop/addr/Miz_sys/DOC/Miz_ip_lib', nor could it be found using path 'C:/Users/wataru/Desktop/新建文件夹/Miz_sys/DOC/Miz_ip_lib'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/wataru/Desktop/addr/Miz_sys/DOC/Miz_ip_lib'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/vivado2018_skd/Vivado/2018.3/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'system.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+system_axi_dma_0_1
+system_axi_gpio_0_0
+system_axis_data_fifo_0_1
+system_axi_mem_intercon_0
+system_processing_system7_0_0
+system_auto_pc_0
+system_processing_system7_0_axi_periph_0
+system_rst_processing_system7_0_50M_0
+system_xlconcat_0_0
+system_ila_0_0
+system_system_ila_0_0
+system_xbar_0
+system_auto_us_0
+system_auto_pc_1
+
+open_project: Time (s): cpu = 00:00:32 ; elapsed = 00:00:28 . Memory (MB): peak = 770.066 ; gain = 174.465
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Adding cell -- xilinx.com:ip:axis_data_fifo:2.0 - axis_data_fifo_0
+Adding cell -- xilinx.com:ip:ila:6.2 - ila_0
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - processing_system7_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M
+Adding cell -- xilinx.com:ip:system_ila:1.1 - system_ila_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_dma_0/s2mm_introut(intr) and /ila_0/probe0(undef)
+Successfully read diagram <system> from BD file <C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd>
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {system_axi_gpio_0_0 system_axi_dma_0_1 system_processing_system7_0_0 system_system_ila_0_0 system_processing_system7_0_axi_periph_0 system_axi_mem_intercon_0 system_xlconcat_0_0 system_axis_data_fifo_0_1 system_ila_0_0 system_rst_processing_system7_0_50M_0}] -log ip_upgrade.log
+Upgrading 'C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd'
+INFO: [IP_Flow 19-3420] Updated system_axi_dma_0_1 to use current project options
+WARNING: [BD 41-1731] Type mismatch between connected pins: /ila_0/probe0(undef) and /axi_dma_0_upgraded_ipi/s2mm_introut(intr)
+INFO: [IP_Flow 19-3420] Updated system_axi_gpio_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated system_axi_mem_intercon_0 to use current project options
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [IP_Flow 19-3420] Updated system_axis_data_fifo_0_1 to use current project options
+INFO: [IP_Flow 19-3420] Updated system_ila_0_0 to use current project options
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0_upgraded_ipi: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_dma_0/s2mm_introut(intr) and /ila_0_upgraded_ipi/probe0(undef)
+INFO: [IP_Flow 19-3420] Updated system_processing_system7_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated system_processing_system7_0_axi_periph_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated system_rst_processing_system7_0_50M_0 to use current project options
+ipx::get_ipfiles: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 1178.020 ; gain = 2.000
+INFO: [IP_Flow 19-3420] Updated system_system_ila_0_0 to use current project options
+INFO: [IP_Flow 19-3420] Updated system_xlconcat_0_0 to use current project options
+Wrote  : <C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.srcs\sources_1\bd\system\system.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/ip_upgrade.log'.
+upgrade_ip: Time (s): cpu = 00:01:39 ; elapsed = 00:01:50 . Memory (MB): peak = 1194.047 ; gain = 369.520
+export_ip_user_files -of_objects [get_ips {system_axi_gpio_0_0 system_axi_dma_0_1 system_processing_system7_0_0 system_system_ila_0_0 system_processing_system7_0_axi_periph_0 system_axi_mem_intercon_0 system_xlconcat_0_0 system_axis_data_fifo_0_1 system_ila_0_0 system_rst_processing_system7_0_50M_0}] -no_script -sync -force -quiet
+set_property synth_checkpoint_mode Hierarchical [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+generate_target all [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+Wrote  : <C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+Exporting to file c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/hw_handoff/system_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/hw_handoff/system_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/synth/system_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.hwdef
+generate_target: Time (s): cpu = 00:00:51 ; elapsed = 00:00:59 . Memory (MB): peak = 1381.770 ; gain = 170.867
+export_ip_user_files -of_objects [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+launch_runs -jobs 8 {system_processing_system7_0_0_synth_1 system_rst_processing_system7_0_50M_0_synth_1 system_ila_0_0_synth_1 system_axis_data_fifo_0_1_synth_1 system_axi_gpio_0_0_synth_1 system_axi_dma_0_1_synth_1 system_system_ila_0_0_synth_1 system_xbar_0_synth_1 system_auto_pc_0_synth_1 system_auto_us_0_synth_1 system_auto_pc_1_synth_1}
+[Sat Feb 12 19:46:37 2022] Launched system_processing_system7_0_0_synth_1, system_rst_processing_system7_0_50M_0_synth_1, system_ila_0_0_synth_1, system_axis_data_fifo_0_1_synth_1, system_axi_gpio_0_0_synth_1, system_axi_dma_0_1_synth_1, system_system_ila_0_0_synth_1, system_xbar_0_synth_1, system_auto_pc_0_synth_1, system_auto_us_0_synth_1, system_auto_pc_1_synth_1...
+Run output will be captured here:
+system_processing_system7_0_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_processing_system7_0_0_synth_1/runme.log
+system_rst_processing_system7_0_50M_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_rst_processing_system7_0_50M_0_synth_1/runme.log
+system_ila_0_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_ila_0_0_synth_1/runme.log
+system_axis_data_fifo_0_1_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_axis_data_fifo_0_1_synth_1/runme.log
+system_axi_gpio_0_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_axi_gpio_0_0_synth_1/runme.log
+system_axi_dma_0_1_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_axi_dma_0_1_synth_1/runme.log
+system_system_ila_0_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_system_ila_0_0_synth_1/runme.log
+system_xbar_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_xbar_0_synth_1/runme.log
+system_auto_pc_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_auto_pc_0_synth_1/runme.log
+system_auto_us_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_auto_us_0_synth_1/runme.log
+system_auto_pc_1_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_auto_pc_1_synth_1/runme.log
+export_simulation -of_objects [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -directory C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.ip_user_files -ipstatic_source_dir C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.cache/compile_simlib/modelsim} {questa=C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.cache/compile_simlib/questa} {riviera=C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.cache/compile_simlib/riviera} {activehdl=C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_QSPI_GRP_SINGLE_SS_ENABLE {1} CONFIG.PCW_ENET0_PERIPHERAL_ENABLE {1} CONFIG.PCW_ENET0_ENET0_IO {EMIO} CONFIG.PCW_ENET0_GRP_MDIO_ENABLE {1} CONFIG.PCW_ENET0_GRP_MDIO_IO {EMIO}] [get_bd_cells processing_system7_0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins processing_system7_0/ENET0_GMII_TX_EN]
+WARNING: [BD 41-1306] The connection to interface pin /processing_system7_0/ENET0_GMII_TX_EN is being overridden by the user. This pin will not be connected as a part of interface connection GMII_ETHERNET_0
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins processing_system7_0/ENET0_GMII_TXD]
+WARNING: [BD 41-1306] The connection to interface pin /processing_system7_0/ENET0_GMII_TXD is being overridden by the user. This pin will not be connected as a part of interface connection GMII_ETHERNET_0
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins processing_system7_0/ENET0_GMII_RX_DV] [get_bd_pins processing_system7_0/ENET0_GMII_RX_CLK] [get_bd_pins processing_system7_0/ENET0_GMII_TX_CLK] [get_bd_pins processing_system7_0/ENET0_GMII_RXD]
+WARNING: [BD 41-1306] The connection to interface pin /processing_system7_0/ENET0_GMII_RX_DV is being overridden by the user. This pin will not be connected as a part of interface connection GMII_ETHERNET_0
+WARNING: [BD 41-1306] The connection to interface pin /processing_system7_0/ENET0_GMII_RX_CLK is being overridden by the user. This pin will not be connected as a part of interface connection GMII_ETHERNET_0
+WARNING: [BD 41-1306] The connection to interface pin /processing_system7_0/ENET0_GMII_TX_CLK is being overridden by the user. This pin will not be connected as a part of interface connection GMII_ETHERNET_0
+WARNING: [BD 41-1306] The connection to interface pin /processing_system7_0/ENET0_GMII_RXD is being overridden by the user. This pin will not be connected as a part of interface connection GMII_ETHERNET_0
+endgroup
+startgroup
+make_bd_intf_pins_external  [get_bd_intf_pins processing_system7_0/MDIO_ETHERNET_0]
+endgroup
+delete_bd_objs [get_bd_nets processing_system7_0_ENET0_GMII_TXD]
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_nets processing_system7_0_ENET0_GMII_TXD]'
+delete_bd_objs [get_bd_nets processing_system7_0_ENET0_GMII_TXD]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_1
+endgroup
+set_property location {4.5 2012 774} [get_bd_cells xlconcat_1]
+set_property -dict [list CONFIG.IN0_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_1]
+set_property -dict [list CONFIG.NUM_PORTS {1} CONFIG.IN0_WIDTH {4}] [get_bd_cells xlconcat_1]
+connect_bd_net [get_bd_pins xlconcat_1/In0] [get_bd_pins processing_system7_0/ENET0_GMII_TXD]
+WARNING: [BD 41-1306] The connection to interface pin /processing_system7_0/ENET0_GMII_TXD is being overridden by the user. This pin will not be connected as a part of interface connection GMII_ETHERNET_0
+connect_bd_net [get_bd_ports ENET0_GMII_TXD_0] [get_bd_pins xlconcat_1/dout]
+copy_bd_objs /  [get_bd_cells {xlconcat_1}]
+delete_bd_objs [get_bd_nets ENET0_GMII_RXD_0_1]
+connect_bd_net [get_bd_pins processing_system7_0/ENET0_GMII_RXD] [get_bd_pins xlconcat_2/dout]
+WARNING: [BD 41-1306] The connection to interface pin /processing_system7_0/ENET0_GMII_RXD is being overridden by the user. This pin will not be connected as a part of interface connection GMII_ETHERNET_0
+connect_bd_net [get_bd_ports ENET0_GMII_RXD_0] [get_bd_pins xlconcat_2/In0]
+save_bd_design
+Wrote  : <C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+regenerate_bd_layout
+save_bd_design
+Wrote  : <C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_2' with propagated value(8). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_1' with propagated value(8). Command ignored
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_2' with propagated value(8). Command ignored
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_1' with propagated value(8). Command ignored
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+validate_bd_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1584.168 ; gain = 0.000
+save_bd_design
+Wrote  : <C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+reset_target all [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+export_ip_user_files -of_objects  [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+make_wrapper -files [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -top
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_1/In0'(4) to net 'processing_system7_0_ENET0_GMII_TXD'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/processing_system7_0/ENET0_GMII_RXD'(8) to net 'xlconcat_2_dout'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_2/In0'(4) to net 'ENET0_GMII_RXD_0_1'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_1/In0'(4) to net 'processing_system7_0_ENET0_GMII_TXD'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/processing_system7_0/ENET0_GMII_RXD'(8) to net 'xlconcat_2_dout'(4) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_2/In0'(4) to net 'ENET0_GMII_RXD_0_1'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+add_files -norecurse C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+update_compile_order -fileset sources_1
+set_property name ENET0_GII_RXD_0 [get_bd_ports ENET0_GMII_RXD_0]
+startgroup
+set_property -dict [list CONFIG.NUM_PORTS {2}] [get_bd_cells xlconcat_2]
+endgroup
+startgroup
+set_property -dict [list CONFIG.IN1_WIDTH.VALUE_SRC USER] [get_bd_cells xlconcat_2]
+set_property -dict [list CONFIG.IN1_WIDTH {4}] [get_bd_cells xlconcat_2]
+endgroup
+set_property name ENET0_GMII_RXD_0 [get_bd_ports ENET0_GII_RXD_0]
+delete_bd_objs [get_bd_nets ENET0_GMII_RXD_0_1] [get_bd_ports ENET0_GMII_RXD_0]
+startgroup
+make_bd_pins_external  [get_bd_pins xlconcat_2/In0]
+endgroup
+set_property name ENET0_GMII_RXD_0 [get_bd_ports In0_0]
+save_bd_design
+Wrote  : <C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+report_ip_status -name ip_status 
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_1' with propagated value(8). Command ignored
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_1' with propagated value(8). Command ignored
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+validate_bd_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1624.422 ; gain = 0.000
+export_ip_user_files -of_objects  [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+file delete -force C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+reset_target all [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+export_ip_user_files -of_objects  [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -sync -no_script -force -quiet
+report_ip_status -name ip_status 
+make_wrapper -files [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -top
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.srcs\sources_1\bd\system\system.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_1/In0'(4) to net 'processing_system7_0_ENET0_GMII_TXD'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_1/In0'(4) to net 'processing_system7_0_ENET0_GMII_TXD'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+add_files -norecurse C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+file delete -force C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+startgroup
+set_property -dict [list CONFIG.PCW_UIPARAM_DDR_PARTNO {MT41J256M16 RE-125}] [get_bd_cells processing_system7_0]
+endgroup
+validate_bd_design
+WARNING: [BD 41-1781] Updates have been made to one or more nets/interface connections marked for debug.
+Debug nets, which are already connected to System ILA IP core in the block-design, will be automatically available for debug in Hardware Manager.
+For unconnected Debug nets, please open synthesized design and use 'Set Up Debug' wizard to insert, modify or delete Debug Cores. Failure to do so could result in critical warnings and errors in the implementation flow.
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_1' with propagated value(8). Command ignored
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter In0_width(4) on '/xlconcat_1' with propagated value(8). Command ignored
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+validate_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1721.262 ; gain = 1.246
+report_ip_status -name ip_status 
+reset_target all [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+export_ip_user_files -of_objects  [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -sync -no_script -force -quiet
+generate_target all [get_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.srcs\sources_1\bd\system\system.bd> 
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_1/In0'(4) to net 'processing_system7_0_ENET0_GMII_TXD'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v
+CRITICAL WARNING: [BD 41-1228] Width mismatch when connecting input pin '/xlconcat_1/In0'(4) to net 'processing_system7_0_ENET0_GMII_TXD'(8) - Only lower order bits will be connected, and other input bits of this pin will be left unconnected.
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/sim/system.v
+VHDL Output written to : C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axis_data_fifo_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 .
+Exporting to file c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/hw_handoff/system_system_ila_0_0.hwh
+Generated Block Design Tcl file c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/hw_handoff/system_system_ila_0_0_bd.tcl
+Generated Hardware Definition File c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/synth/system_system_ila_0_0.hwdef
+INFO: [BD 41-1029] Generation completed for the IP Integrator block system_ila_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_2 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_pc .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.hwdef
+generate_target: Time (s): cpu = 00:00:39 ; elapsed = 00:00:46 . Memory (MB): peak = 1837.746 ; gain = 107.309
+export_ip_user_files -of_objects [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+launch_runs -jobs 8 {system_processing_system7_0_0_synth_1 system_rst_processing_system7_0_50M_0_synth_1 system_ila_0_0_synth_1 system_axis_data_fifo_0_1_synth_1 system_axi_gpio_0_0_synth_1 system_axi_dma_0_1_synth_1 system_system_ila_0_0_synth_1 system_xbar_0_synth_1 system_auto_pc_0_synth_1 system_auto_us_0_synth_1 system_auto_pc_1_synth_1}
+[Sat Feb 12 20:00:41 2022] Launched system_processing_system7_0_0_synth_1, system_rst_processing_system7_0_50M_0_synth_1, system_ila_0_0_synth_1, system_axis_data_fifo_0_1_synth_1, system_axi_gpio_0_0_synth_1, system_axi_dma_0_1_synth_1, system_system_ila_0_0_synth_1, system_xbar_0_synth_1, system_auto_pc_0_synth_1, system_auto_us_0_synth_1, system_auto_pc_1_synth_1...
+Run output will be captured here:
+system_processing_system7_0_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_processing_system7_0_0_synth_1/runme.log
+system_rst_processing_system7_0_50M_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_rst_processing_system7_0_50M_0_synth_1/runme.log
+system_ila_0_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_ila_0_0_synth_1/runme.log
+system_axis_data_fifo_0_1_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_axis_data_fifo_0_1_synth_1/runme.log
+system_axi_gpio_0_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_axi_gpio_0_0_synth_1/runme.log
+system_axi_dma_0_1_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_axi_dma_0_1_synth_1/runme.log
+system_system_ila_0_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_system_ila_0_0_synth_1/runme.log
+system_xbar_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_xbar_0_synth_1/runme.log
+system_auto_pc_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_auto_pc_0_synth_1/runme.log
+system_auto_us_0_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_auto_us_0_synth_1/runme.log
+system_auto_pc_1_synth_1: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_auto_pc_1_synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1837.746 ; gain = 0.000
+export_simulation -of_objects [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -directory C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.ip_user_files -ipstatic_source_dir C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.cache/compile_simlib/modelsim} {questa=C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.cache/compile_simlib/questa} {riviera=C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.cache/compile_simlib/riviera} {activehdl=C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -top
+add_files -norecurse C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v] -no_script -reset -force -quiet
+remove_files  C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+file delete -force C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd]
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z010clg400-1
+Top: dma_system_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1943.863 ; gain = 81.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dma_system_wrapper' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/new/dma_system_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [G:/vivado2018_skd/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [G:/vivado2018_skd/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
+INFO: [Synth 8-6157] synthesizing module 'system' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:825]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_dma_0_1' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_axi_dma_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_dma_0_1' (2#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_axi_dma_0_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_dma_0' of module 'system_axi_dma_0_1' requires 43 connections, but only 41 given [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1092]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_gpio_0_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_gpio_0_0' (3#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_mem_intercon_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1433]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1P403ZT' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:269]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (4#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_us_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_us_0' (5#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_auto_us_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1P403ZT' (6#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:269]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_mem_intercon_0' (7#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1433]
+INFO: [Synth 8-6157] synthesizing module 'system_axis_data_fifo_0_1' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_axis_data_fifo_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axis_data_fifo_0_1' (8#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_axis_data_fifo_0_1_stub.v:6]
+WARNING: [Synth 8-350] instance 'axis_data_fifo_0' of module 'system_axis_data_fifo_0_1' requires 15 connections, but only 13 given [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1196]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1210]
+INFO: [Synth 8-6157] synthesizing module 'system_ila_0_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ila_0_0' (9#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (10#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'system_processing_system7_0_0' requires 124 connections, but only 112 given [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1213]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_axi_periph_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1633]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_WKXF3L' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_WKXF3L' (11#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1ORP4PS' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:137]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1ORP4PS' (12#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:137]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_IK3G2O' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:519]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_1' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_1' (13#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_IK3G2O' (14#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:519]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_0' (15#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_xbar_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'xbar' of module 'system_xbar_0' requires 40 connections, but only 38 given [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:2143]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_axi_periph_0' (16#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1633]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_processing_system7_0_50M_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_rst_processing_system7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_processing_system7_0_50M_0' (17#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_rst_processing_system7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'system_rst_processing_system7_0_50M_0' requires 10 connections, but only 7 given [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1406]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1414]
+INFO: [Synth 8-6157] synthesizing module 'system_system_ila_0_0' [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_system_ila_0_0' (18#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/.Xil/Vivado-20420-wataru/realtime/system_system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_0_0' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 1 - type: integer 
+	Parameter NUM_PORTS bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (19#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (20#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_1_0' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_xlconcat_1_0/synth/system_xlconcat_1_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat__parameterized0' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 4 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 4 - type: integer 
+	Parameter NUM_PORTS bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat__parameterized0' (20#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_1_0' (21#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_xlconcat_1_0/synth/system_xlconcat_1_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_1_1' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_xlconcat_1_1/synth/system_xlconcat_1_1.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat__parameterized1' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 4 - type: integer 
+	Parameter IN1_WIDTH bound to: 4 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 8 - type: integer 
+	Parameter NUM_PORTS bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat__parameterized1' (21#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_1_1' (22#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_xlconcat_1_1/synth/system_xlconcat_1_1.v:58]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'system_ila_0'. This will prevent further optimization [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1414]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axis_data_fifo_0'. This will prevent further optimization [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1196]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'axi_dma_0'. This will prevent further optimization [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1092]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_0'. This will prevent further optimization [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1421]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:1210]
+INFO: [Synth 8-6155] done synthesizing module 'system' (23#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/synth/system.v:825]
+INFO: [Synth 8-6155] done synthesizing module 'dma_system_wrapper' (24#1) [C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/new/dma_system_wrapper.v:12]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In2[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In3[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In6[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In7[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In8[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In9[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In10[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In11[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In12[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In13[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In14[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In15[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In16[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In17[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In18[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In19[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In20[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In21[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In22[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In23[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In24[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In25[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In26[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In27[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In28[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In29[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In30[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized1 has unconnected port In31[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In1[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In2[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In3[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In6[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In7[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In8[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In9[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In10[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In11[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In12[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In13[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In14[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In15[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In16[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In17[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In18[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In19[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In20[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In21[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In22[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In23[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In24[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In25[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In26[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In27[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In28[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In29[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In30[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat__parameterized0 has unconnected port In31[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In1[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In2[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In4[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In5[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In6[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In7[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In8[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In9[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In10[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In11[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In12[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In13[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In14[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In15[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In16[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In17[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In18[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In19[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In20[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In21[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In22[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In23[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In24[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In25[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In26[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In27[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In28[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In29[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In30[0]
+WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In31[0]
+WARNING: [Synth 8-3331] design s00_couplers_imp_IK3G2O has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design s00_couplers_imp_IK3G2O has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1ORP4PS has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1ORP4PS has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m01_couplers_imp_1ORP4PS has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m01_couplers_imp_1ORP4PS has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m00_couplers_imp_WKXF3L has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m00_couplers_imp_WKXF3L has unconnected port M_ARESETN
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1986.496 ; gain = 123.887
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1986.496 ; gain = 123.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1986.496 ; gain = 123.887
+---------------------------------------------------------------------------------
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_dma_0_1/system_axi_dma_0_1.dcp' for cell 'system_i/axi_dma_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.dcp' for cell 'system_i/axi_gpio_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axis_data_fifo_0_1/system_axis_data_fifo_0_1.dcp' for cell 'system_i/axis_data_fifo_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0.dcp' for cell 'system_i/ila_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.dcp' for cell 'system_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_50M_0/system_rst_processing_system7_0_50M_0.dcp' for cell 'system_i/rst_processing_system7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/system_system_ila_0_0.dcp' for cell 'system_i/system_ila_0'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0.dcp' for cell 'system_i/axi_mem_intercon/s00_couplers/auto_pc'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_us_0/system_auto_us_0.dcp' for cell 'system_i/axi_mem_intercon/s00_couplers/auto_us'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_xbar_0/system_xbar_0.dcp' for cell 'system_i/processing_system7_0_axi_periph/xbar'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_auto_pc_1/system_auto_pc_1.dcp' for cell 'system_i/processing_system7_0_axi_periph/s00_couplers/auto_pc'
+INFO: [Netlist 29-17] Analyzing 243 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 7 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 6 OBUFs to IO ports without IO buffers.
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc] for cell 'system_i/processing_system7_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dma_system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dma_system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_50M_0/system_rst_processing_system7_0_50M_0_board.xdc] for cell 'system_i/rst_processing_system7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_50M_0/system_rst_processing_system7_0_50M_0_board.xdc] for cell 'system_i/rst_processing_system7_0_100M/U0'
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_50M_0/system_rst_processing_system7_0_50M_0.xdc] for cell 'system_i/rst_processing_system7_0_100M/U0'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_rst_processing_system7_0_50M_0/system_rst_processing_system7_0_50M_0.xdc] for cell 'system_i/rst_processing_system7_0_100M/U0'
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'system_i/ila_0/inst'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'system_i/ila_0/inst'
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc] for cell 'system_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0_board.xdc] for cell 'system_i/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/axi_gpio_0/U0'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.xdc] for cell 'system_i/axi_gpio_0/U0'
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_dma_0_1/system_axi_dma_0_1.xdc] for cell 'system_i/axi_dma_0/U0'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_dma_0_1/system_axi_dma_0_1.xdc] for cell 'system_i/axi_dma_0/U0'
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'system_i/system_ila_0/inst/ila_lib/inst'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc] for cell 'system_i/system_ila_0/inst/ila_lib/inst'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2235.078 ; gain = 0.000
+Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_dma_0_1/system_axi_dma_0_1_clocks.xdc] for cell 'system_i/axi_dma_0/U0'
+Finished Parsing XDC File [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_axi_dma_0_1/system_axi_dma_0_1_clocks.xdc] for cell 'system_i/axi_dma_0/U0'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_B_CHANNEL.cmd_b_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'system_i/axi_mem_intercon/s00_couplers/auto_pc/inst/gen_axi4_axi3.axi3_conv_inst/USE_WRITE.write_addr_inst/USE_BURSTS.cmd_queue/inst/fifo_gen_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dma_system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dma_system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dma_system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dma_system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.rrst_wr_inst'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/gaxis_rst_sync.xpm_cdc_sync_rst_inst'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_sync_rst.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.wrst_rd_inst'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl] for cell 'system_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst_axis.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dma_system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dma_system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+Finished Sourcing Tcl File [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl] for cell 'system_i/axi_dma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [G:/vivado2018_skd/Vivado/2018.3/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/dma_system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/dma_system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2235.078 ; gain = 0.000
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 2235.078 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 93 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRLC32E, SRL16E): 88 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 1 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 4 instances
+
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+WARNING: [Designutils 20-3303] unexpected site type 'IOPAD' in HDPYFinalizeIO
+INFO: [Common 17-14] Message 'Designutils 20-3303' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:36 ; elapsed = 00:00:41 . Memory (MB): peak = 2251.508 ; gain = 388.898
+83 Infos, 207 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 2251.508 ; gain = 389.625
+set_property IOSTANDARD LVCMOS33 [get_ports [list {ENET0_GMII_RXD_0[3]} {ENET0_GMII_RXD_0[2]} {ENET0_GMII_RXD_0[1]} {ENET0_GMII_RXD_0[0]} {ENET0_GMII_TXD_0[3]} {ENET0_GMII_TXD_0[2]} {ENET0_GMII_TXD_0[1]} {ENET0_GMII_TXD_0[0]} ENET0_GMII_RX_DV_0 {ENET0_GMII_TX_EN_0[0]}]]
+place_ports {ENET0_GMII_RXD_0[1]} J14
+startgroup
+set_property package_pin "" [get_ports [list  {ENET0_GMII_RXD_0[1]}]]
+place_ports {ENET0_GMII_RXD_0[0]} J14
+endgroup
+place_ports {ENET0_GMII_RXD_0[1]} K14
+place_ports {ENET0_GMII_RXD_0[2]} M18
+place_ports {ENET0_GMII_RXD_0[3]} M17
+place_ports {ENET0_GMII_TXD_0[0]} M14
+place_ports {ENET0_GMII_TXD_0[1]} L15
+place_ports {ENET0_GMII_TXD_0[2]} M15
+place_ports {ENET0_GMII_TXD_0[3]} N15
+place_ports ENET0_GMII_RX_DV_0 K18
+set_property package_pin "" [get_ports [list  {ENET0_GMII_TX_EN_0[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list MDIO_ETHERNET_0_0_mdio_io MDIO_ETHERNET_0_0_mdc]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ENET0_GMII_RX_CLK_0]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list ENET0_GMII_TX_CLK_0]]
+place_ports ENET0_GMII_RX_CLK_0 K17
+place_ports ENET0_GMII_TX_CLK_0 L14
+place_ports {ENET0_GMII_TX_EN_0[0]} N16
+place_ports MDIO_ETHERNET_0_0_mdc J15
+startgroup
+set_property package_pin "" [get_ports [list  MDIO_ETHERNET_0_0_mdc]]
+place_ports MDIO_ETHERNET_0_0_mdio_io J15
+endgroup
+place_ports MDIO_ETHERNET_0_0_mdc G14
+close [ open C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/constrs_1/new/vd_xci.xdc w ]
+add_files -fileset constrs_1 C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/constrs_1/new/vd_xci.xdc
+set_property target_constrs_file C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/constrs_1/new/vd_xci.xdc [current_fileset -constrset]
+save_constraints -force
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 2528.074 ; gain = 0.000
+launch_runs impl_3 -to_step write_bitstream -jobs 8
+[Sat Feb 12 20:22:57 2022] Launched synth_3...
+Run output will be captured here: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/synth_3/runme.log
+[Sat Feb 12 20:22:57 2022] Launched impl_3...
+Run output will be captured here: C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/impl_3/runme.log
+file mkdir C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk
+file copy -force C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/impl_3/dma_system_wrapper.sysdef C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+
+launch_sdk -workspace C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk -hwspec C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk -hwspec C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk -hwspec C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk -hwspec C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Feb 12 20:58:26 2022...

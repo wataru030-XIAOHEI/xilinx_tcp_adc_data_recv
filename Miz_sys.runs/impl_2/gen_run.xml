@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_2" LaunchPart="xc7z007sclg400-1" LaunchTime="1644652839">
+  <File Type="PA-TCL" Name="dma_system_wrapper.tcl"/>
+  <File Type="BITSTR-BMM" Name="dma_system_wrapper_bd.bmm"/>
+  <File Type="REPORTS-TCL" Name="dma_system_wrapper_reports.tcl"/>
+  <File Type="OPT-DCP" Name="dma_system_wrapper_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="dma_system_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="dma_system_wrapper_pwropt.dcp"/>
+  <File Type="BG-BGN" Name="dma_system_wrapper.bgn"/>
+  <File Type="PLACE-DCP" Name="dma_system_wrapper_placed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="dma_system_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="dma_system_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="dma_system_wrapper.bin"/>
+  <File Type="PHYSOPT-DCP" Name="dma_system_wrapper_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="dma_system_wrapper.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="dma_system_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="dma_system_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="dma_system_wrapper_routed_bb.dcp"/>
+  <File Type="BITSTR-LTX" Name="dma_system_wrapper.ltx"/>
+  <File Type="BITSTR-MMI" Name="dma_system_wrapper.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="dma_system_wrapper.sysdef"/>
+  <File Type="ROUTE-TIMING-PB" Name="dma_system_wrapper_timing_summary_routed.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="dma_system_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="dma_system_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="dma_system_wrapper.bit"/>
+  <File Type="BITSTR-RBT" Name="dma_system_wrapper.rbt"/>
+  <File Type="BITSTR-NKY" Name="dma_system_wrapper.nky"/>
+  <File Type="BG-DRC" Name="dma_system_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="dma_system_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/system.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/dma_system_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_axi_gpio_0_0/system_axi_gpio_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_axi_mem_intercon_0/system_axi_mem_intercon_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_axis_data_fifo_0_1/system_axis_data_fifo_0_1.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_processing_system7_0_axi_periph_0/system_processing_system7_0_axi_periph_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_rst_processing_system7_0_50M_0/system_rst_processing_system7_0_50M_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/system/ip/system_xlconcat_0_0/system_xlconcat_0_0.upgrade_log"/>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="dma_system_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2015"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

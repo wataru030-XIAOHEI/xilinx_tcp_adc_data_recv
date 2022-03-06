@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Sep 18 13:59:07 2018
+# Process ID: 5688
+# Current directory: H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7460 H:\05_example_Network\CH01_DMA_PL_LWIP\Miz_sys\Miz_sys.xpr
+# Log file: H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/vivado.log
+# Journal file: H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.xpr
+INFO: [Project 1-313] Project file moved from '/home/osrc/board/old/S03_CH07_DMA_PL_LWIP/Miz_sys' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'h:/05_example_Network/CH01_DMA_PL_LWIP/DOC/Miz_ip_lib'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2017.4/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 919.480 ; gain = 196.191
+update_compile_order -fileset sources_1
+open_bd_design {H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+Adding cell -- xilinx.com:ip:axi_dma:7.1 - axi_dma_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axis_data_fifo:1.1 - axis_data_fifo_0
+Adding cell -- xilinx.com:ip:ila:6.2 - ila_0
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_50M
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_dma_0/s2mm_introut(intr) and /ila_0/probe0(undef)
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_dwidth_converter:2.1 - auto_us
+Successfully read diagram <system> from BD file <H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 976.383 ; gain = 48.160
+open_bd_design {H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Tue Sep 18 14:01:27 2018] Launched synth_1...
+Run output will be captured here: H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.runs/synth_1/runme.log
+[Tue Sep 18 14:01:27 2018] Launched impl_1...
+Run output will be captured here: H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.runs/impl_1/runme.log
+file copy -force H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.runs/impl_1/dma_system_wrapper.sysdef H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+
+launch_sdk -workspace H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.runs/impl_1/dma_system_wrapper.sysdef H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+
+launch_sdk -workspace H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 18 15:57:16 2018...

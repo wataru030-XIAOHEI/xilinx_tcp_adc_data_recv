@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 4 resources" deleteContents="false" description="Delete 4 resources" element1="/softwave/src/helloworld.c" element2="/softwave/src/platform_config.h" element3="/softwave/src/platform.c" element4="/softwave/src/platform.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="4" stamp="1644669196595"/>
+</session>

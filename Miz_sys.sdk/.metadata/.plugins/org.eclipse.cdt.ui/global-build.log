@@ -1,0 +1,1263 @@
+14:04:27 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:04:30 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:07:04 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/tcp_transmission.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_transmission.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_transmission.d" -MT"src/tcp_transmission.o" -o "src/tcp_transmission.o" "../src/tcp_transmission.c"
+'Finished building: ../src/tcp_transmission.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115460	   3116	9492800	9611376	 92a870	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:07:09 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:14:09 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/tcp_transmission.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_transmission.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/tcp_transmission.d" -MT"src/tcp_transmission.o" -o "src/tcp_transmission.o" "../src/tcp_transmission.c"
+'Finished building: ../src/tcp_transmission.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115460	   3116	9492800	9611376	 92a870	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:14:14 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:15:21 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:59:6: warning: unused variable 'cnt' [-Wunused-variable]
+  int cnt ;
+      ^~~
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115376	   3116	9492800	9611292	 92a81c	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:15:24 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:17:14 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115460	   3116	9492800	9611376	 92a870	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:17:18 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:20:07 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115468	   3116	9492800	9611384	 92a878	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:20:13 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115468	   3116	9492800	9611384	 92a878	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:20:16 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:23:09 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115468	   3116	9492800	9611384	 92a878	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:23:18 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115468	   3116	9492800	9611384	 92a878	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:23:21 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:26:30 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115468	   3116	9492800	9611384	 92a878	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:26:41 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:29:39 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:136:19: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+    while(cnt == 16,776,959){
+                   ^
+../src/main.c:136:23: warning: left-hand operand of comma expression has no effect [-Wunused-value]
+    while(cnt == 16,776,959){
+                       ^
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/main.c: In function 'main':
+../src/main.c:135:8: warning: 'cnt' may be used uninitialized in this function [-Wmaybe-uninitialized]
+    cnt = cnt + 1 ;
+    ~~~~^~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115468	   3116	9492800	9611384	 92a878	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:29:45 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:30:44 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115468	   3116	9492800	9611384	 92a878	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:31:00 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115468	   3116	9492800	9611384	 92a878	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:31:11 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:32:58 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115532	   3116	9492800	9611448	 92a8b8	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:34:13 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:136:24: warning: implicit declaration of function 'xil_pirntf'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+    if(cnt == 34215679){xil_pirntf("%lld\r\n",cnt)};
+                        ^~~~~~~~~~
+                        xil_printf
+../src/main.c:136:50: error: expected ';' before '}' token
+    if(cnt == 34215679){xil_pirntf("%lld\r\n",cnt)};
+                                                  ^
+../src/main.c:137:50: error: expected ';' before '}' token
+    if(cnt == 94215679){xil_pirntf("%lld\r\n",cnt)};
+                                                  ^
+../src/main.c:138:50: error: expected ';' before '}' token
+    if(cnt == 64215679){xil_pirntf("%lld\r\n",cnt)};
+                                                  ^
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/subdir.mk:35: src/main.o] Error 1
+14:34:35 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:136:24: warning: implicit declaration of function 'xil_pirntf'; did you mean 'xil_printf'? [-Wimplicit-function-declaration]
+    if(cnt == 34215679){xil_pirntf("%lld\r\n",cnt);}
+                        ^~~~~~~~~~
+                        xil_printf
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+./src/main.o: In function `main':
+C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.sdk\softwave\Debug/../src/main.c:136: undefined reference to `xil_pirntf'
+C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.sdk\softwave\Debug/../src/main.c:137: undefined reference to `xil_pirntf'
+C:\Users\wataru\Desktop\addr\Miz_sys\Miz_sys\Miz_sys.sdk\softwave\Debug/../src/main.c:138: undefined reference to `xil_pirntf'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:41: softwave.elf] Error 1
+14:34:50 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115660	   3116	9492800	9611576	 92a938	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:34:55 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:37:49 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115532	   3116	9492800	9611448	 92a8b8	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:37:55 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:39:52 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115532	   3116	9492800	9611448	 92a8b8	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:40:05 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:42:34 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115532	   3116	9492800	9611448	 92a8b8	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:42:40 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115532	   3116	9492800	9611448	 92a8b8	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:42:56 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115532	   3116	9492800	9611448	 92a8b8	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:42:59 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:44:07 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115540	   3116	9492800	9611456	 92a8c0	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:44:14 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:46:00 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115540	   3116	9492800	9611456	 92a8c0	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:46:09 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:50:54 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115540	   3116	9492800	9611456	 92a8c0	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:51:03 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:51:04 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:51:05 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:53:35 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115540	   3116	9492800	9611456	 92a8c0	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:53:41 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:54:38 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115540	   3116	9492800	9611456	 92a8c0	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:54:45 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:56:06 **** Auto Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../softwave_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:48:2: warning: implicit declaration of function 'Setup_Intr_Exception'; did you mean 'setup_Intr_Exception'? [-Wimplicit-function-declaration]
+  Setup_Intr_Exception(&Intc);
+  ^~~~~~~~~~~~~~~~~~~~
+  setup_Intr_Exception
+../src/main.c: In function 'main':
+../src/main.c:85:2: warning: implicit declaration of function 'lwip_init'; did you mean 'ip_init'? [-Wimplicit-function-declaration]
+  lwip_init();
+  ^~~~~~~~~
+  ip_init
+../src/main.c:125:4: warning: implicit declaration of function 'tcp_tmr'; did you mean 'tcp_err'? [-Wimplicit-function-declaration]
+    tcp_tmr();
+    ^~~~~~~
+    tcp_err
+../src/main.c:58:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'init_intr_sys':
+../src/main.c:53:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+'Finished building: ../src/main.c'
+' '
+'Building target: softwave.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../softwave_bsp/ps7_cortexa9_0/lib -o "softwave.elf"  ./src/dma_intr.o ./src/main.o ./src/sys_intr.o ./src/tcp_transmission.o ./src/timer_intr.o   -Wl,--start-group,-lxil,-lgcc,-llwip4,-lc,--end-group
+'Finished building target: softwave.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size softwave.elf  |tee "softwave.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 115540	   3116	9492800	9611456	 92a8c0	softwave.elf
+'Finished building: softwave.elf.size'
+' '
+14:56:09 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:58:23 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:06:53 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:24:59 **** Incremental Build of configuration Debug for project softwave ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

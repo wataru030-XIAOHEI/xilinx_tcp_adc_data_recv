@@ -1,0 +1,350 @@
+
+*** Running vivado
+    with args -log system_adc_0_1.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_adc_0_1.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source system_adc_0_1.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/wataru/Desktop/addr/Miz_sys/DOC/Miz_ip_lib'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'G:/vivado2018_skd/Vivado/2018.3/data/ip'.
+update_ip_catalog: Time (s): cpu = 00:00:04 ; elapsed = 00:00:16 . Memory (MB): peak = 343.277 ; gain = 71.664
+Command: synth_design -top system_adc_0_1 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 43328 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 404.371 ; gain = 61.094
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_adc_0_1' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_adc_0_1/synth/system_adc_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'adc_v1_0' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/39bd/hdl/adc_v1_0.v:4]
+	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'adc_v1_0_M00_AXIS' [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/39bd/hdl/adc_v1_0_M00_AXIS.v:4]
+	Parameter IDLE bound to: 3'b001 
+	Parameter ARBIT bound to: 3'b010 
+	Parameter READ bound to: 3'b100 
+	Parameter BURST_MAX bound to: 1023 - type: integer 
+	Parameter THRESHOLD bound to: 1022 - type: integer 
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_START_COUNT bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'adc_v1_0_M00_AXIS' (1#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/39bd/hdl/adc_v1_0_M00_AXIS.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'adc_v1_0' (2#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ipshared/39bd/hdl/adc_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'system_adc_0_1' (3#1) [c:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.srcs/sources_1/bd/system/ip/system_adc_0_1/synth/system_adc_0_1.v:57]
+WARNING: [Synth 8-3331] design adc_v1_0_M00_AXIS has unconnected port adc_clk
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:16 . Memory (MB): peak = 460.383 ; gain = 117.105
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 460.383 ; gain = 117.105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 460.383 ; gain = 117.105
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 765.582 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 765.582 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.308 . Memory (MB): peak = 767.379 ; gain = 1.797
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:51 . Memory (MB): peak = 767.379 ; gain = 424.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:51 . Memory (MB): peak = 767.379 ; gain = 424.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:51 . Memory (MB): peak = 767.379 ; gain = 424.102
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'adc_v1_0_M00_AXIS'
+INFO: [Synth 8-5546] ROM "axis_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "axis_tvalid" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "state" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                               00 |                              000
+                  iSTATE |                               01 |                              001
+                 iSTATE1 |                               10 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'adc_v1_0_M00_AXIS'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:52 . Memory (MB): peak = 767.379 ; gain = 424.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   3 Input     22 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module adc_v1_0_M00_AXIS 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     22 Bit       Adders := 1     
++---Registers : 
+	               22 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     22 Bit        Muxes := 1     
+	   3 Input     22 Bit        Muxes := 1     
+	   3 Input     16 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5546] ROM "inst/adc_v1_0_M00_AXIS_inst/axis_tlast" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[31] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[30] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[29] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[28] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[27] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[26] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[25] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[24] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[23] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[22] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[21] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[20] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[19] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[18] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[17] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tdata[16] driven by constant 0
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tstrb[3] driven by constant 1
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tstrb[2] driven by constant 1
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tstrb[1] driven by constant 1
+INFO: [Synth 8-3917] design system_adc_0_1 has port m00_axis_tstrb[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:55 . Memory (MB): peak = 767.379 ; gain = 424.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:01:13 . Memory (MB): peak = 783.074 ; gain = 439.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:01:13 . Memory (MB): peak = 783.074 ; gain = 439.797
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:01:14 . Memory (MB): peak = 802.926 ; gain = 459.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:01:16 . Memory (MB): peak = 802.926 ; gain = 459.648
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:01:17 . Memory (MB): peak = 802.926 ; gain = 459.648
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:01:17 . Memory (MB): peak = 802.926 ; gain = 459.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:01:17 . Memory (MB): peak = 802.926 ; gain = 459.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:01:17 . Memory (MB): peak = 802.926 ; gain = 459.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:01:17 . Memory (MB): peak = 802.926 ; gain = 459.648
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     6|
+|2     |LUT1   |     1|
+|3     |LUT2   |    16|
+|4     |LUT3   |    23|
+|5     |LUT4   |     5|
+|6     |LUT5   |     5|
+|7     |LUT6   |     1|
+|8     |FDRE   |    42|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------------------------+------------------+------+
+|      |Instance                   |Module            |Cells |
++------+---------------------------+------------------+------+
+|1     |top                        |                  |    99|
+|2     |  inst                     |adc_v1_0          |    99|
+|3     |    adc_v1_0_M00_AXIS_inst |adc_v1_0_M00_AXIS |    99|
++------+---------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:01:17 . Memory (MB): peak = 802.926 ; gain = 459.648
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:52 . Memory (MB): peak = 802.926 ; gain = 152.652
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:01:18 . Memory (MB): peak = 802.926 ; gain = 459.648
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 802.926 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+47 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:01:26 . Memory (MB): peak = 802.926 ; gain = 459.648
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 802.926 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/wataru/Desktop/addr/Miz_sys/Miz_sys/Miz_sys.runs/system_adc_0_1_synth_1/system_adc_0_1.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_adc_0_1_utilization_synth.rpt -pb system_adc_0_1_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Feb 17 15:57:24 2022...

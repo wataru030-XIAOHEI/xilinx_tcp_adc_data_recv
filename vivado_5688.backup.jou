@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Tue Sep 18 13:59:07 2018
+# Process ID: 5688
+# Current directory: H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7460 H:\05_example_Network\CH01_DMA_PL_LWIP\Miz_sys\Miz_sys.xpr
+# Log file: H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/vivado.log
+# Journal file: H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.xpr
+update_compile_order -fileset sources_1
+open_bd_design {H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+open_bd_design {H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.runs/impl_1/dma_system_wrapper.sysdef H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+
+launch_sdk -workspace H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+file copy -force H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.runs/impl_1/dma_system_wrapper.sysdef H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+
+launch_sdk -workspace H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec H:/05_example_Network/CH01_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf

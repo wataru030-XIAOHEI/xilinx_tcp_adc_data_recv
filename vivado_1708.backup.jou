@@ -1,0 +1,101 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Sun May 26 07:01:29 2019
+# Process ID: 1708
+# Current directory: L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7796 L:\XILINX_FPGA\02_example_SOC\CH27_DMA_PL_LWIP\Miz_sys\Miz_sys.xpr
+# Log file: L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/vivado.log
+# Journal file: L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.xpr
+update_compile_order -fileset sources_1
+open_bd_design {L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+startgroup
+set_property -dict [list CONFIG.NUM_MI {2}] [get_bd_cells processing_system7_0_axi_periph]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M02_AXI]
+endgroup
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M01_AXI]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI] [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+connect_bd_intf_net -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M01_AXI] [get_bd_intf_pins axi_gpio_0/S_AXI]
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M00_AXI] [get_bd_intf_nets axi_dma_0_M_AXI_S2MM] [get_bd_intf_nets axis_data_fifo_0_M_AXIS] [get_bd_cells axi_dma_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+set_property -dict [list CONFIG.c_include_sg {0} CONFIG.c_sg_length_width {23} CONFIG.c_sg_include_stscntrl_strm {0}] [get_bd_cells axi_dma_0]
+set_property location {2.5 781 888} [get_bd_cells axi_dma_0]
+set_property location {2 757 520} [get_bd_cells axi_dma_0]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/S_AXI_LITE] -boundary_type upper [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
+connect_bd_intf_net [get_bd_intf_pins axis_data_fifo_0/M_AXIS] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM]
+connect_bd_net [get_bd_pins axi_dma_0/s_axi_lite_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins axi_dma_0/m_axi_mm2s_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins axi_dma_0/m_axi_s2mm_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins axi_dma_0/axi_resetn] [get_bd_pins rst_processing_system7_0_50M/peripheral_aresetn]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXI_MM2S] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S00_AXI]
+startgroup
+set_property -dict [list CONFIG.c_include_mm2s {0} CONFIG.c_include_s2mm {1}] [get_bd_cells axi_dma_0]
+delete_bd_objs [get_bd_intf_nets axi_dma_0_M_AXI_MM2S]
+endgroup
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] -boundary_type upper [get_bd_intf_pins axi_mem_intercon/S00_AXI]
+connect_bd_net [get_bd_pins axi_dma_0/s2mm_introut] [get_bd_pins ila_0/probe0]
+startgroup
+set_property HDL_ATTRIBUTE.DEBUG false [get_bd_intf_nets { S_AXIS_1 } ]
+endgroup
+set_property -dict [list CONFIG.TDATA_NUM_BYTES {4}] [get_bd_intf_ports S_AXIS]
+validate_bd_design
+assign_bd_address
+open_bd_design {L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets processing_system7_0_FCLK_CLK1] [get_bd_ports FCLK_CLK1]
+startgroup
+make_bd_pins_external  [get_bd_pins processing_system7_0/FCLK_CLK1]
+endgroup
+set_property name FCLK_CLK1 [get_bd_ports FCLK_CLK1_0]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_intf_nets {S_AXIS_1 }]
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_intf_nets S_AXIS_1] {AXIS_SIGNALS "Data and Trigger" CLK_SRC "/s_axis_aclk" SYSTEM_ILA "Auto" APC_EN "0" } \
+                                                         ]
+startgroup
+set_property -dict [list CONFIG.C_BRAM_CNT {2.5} CONFIG.C_DATA_DEPTH {8192}] [get_bd_cells system_ila_0]
+endgroup
+open_bd_design {L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+startgroup
+set_property -dict [list CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells axi_gpio_0]
+endgroup
+open_bd_design {L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+make_wrapper -files [get_files L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd] -top
+add_files -norecurse L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v] -no_script -reset -force -quiet
+remove_files  L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/hdl/system_wrapper.v
+export_ip_user_files -of_objects  [get_files L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/constrs_1/new/dma_system_wrapper.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/constrs_1/new/dma_system_wrapper.xdc
+file delete -force L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/constrs_1/new/dma_system_wrapper.xdc
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_bd_design {L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+open_bd_design {L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+open_bd_design {L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.srcs/sources_1/bd/system/system.bd}
+set_property name rst_processing_system7_0_100M [get_bd_cells rst_processing_system7_0_50M]
+save_bd_design
+regenerate_bd_layout
+set_property location {4 1415 678} [get_bd_cells processing_system7_0]
+set_property location {4 1441 410} [get_bd_cells axi_gpio_0]
+set_property location {3 973 422} [get_bd_cells rst_processing_system7_0_100M]
+set_property location {1724 477} [get_bd_ports peripheral_aresetn]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+launch_sdk -workspace L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+file copy -force L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.runs/impl_1/dma_system_wrapper.sysdef L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+
+launch_sdk -workspace L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
+launch_sdk -workspace L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk -hwspec L:/XILINX_FPGA/02_example_SOC/CH27_DMA_PL_LWIP/Miz_sys/Miz_sys.sdk/dma_system_wrapper.hdf
